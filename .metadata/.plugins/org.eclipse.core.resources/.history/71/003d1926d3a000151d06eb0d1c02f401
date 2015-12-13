@@ -1,0 +1,64 @@
+package com.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@SpringBootApplication
+@Controller
+@EnableAutoConfiguration
+public class DemoApplication {
+	
+	@RequestMapping("/hello")
+    @ResponseBody
+    String home() {
+        return "Hello World!";
+    }
+	
+	@RequestMapping("/buscaContatos")
+    @ResponseBody
+	public String buscaContatos() {
+		
+		String contatos = "["
+				+ "{"
+				+ "		'nome' : 'Bruno',"
+				+ "		'telefone' : '9999-8877',"
+				+ "		'data' : ''2015-12-12T12:53:46.204Z',"
+				+ "		'operadora' : {"
+				+ "			'nome' : 'Oi',"
+				+ "			'codigo' : 14,"
+				+ "			'categoria' : 'Celular'"
+				+ "		}"
+				+ "},"
+				+ "{"
+				+ "		'nome' : 'Sandra',"
+				+ "		'telefone' : '9999-3333',"
+				+ "		'data' : ''2015-12-12T12:53:46.204Z',"
+				+ "		'operadora' : {"
+				+ "			'nome' : 'Vivo',"
+				+ "			'codigo' : 15,"
+				+ "			'categoria' : 'Celular'"
+				+ "		}"
+				+ "},"
+				+ "{"
+				+ "		'nome' : 'Mariana',"
+				+ "		'telefone' : '9999-9999',"
+				+ "		'data' : ''2015-12-12T12:53:46.204Z',"
+				+ "		'operadora' : {"
+				+ "			'nome' : 'Tim',"
+				+ "			'codigo' : 41,"
+				+ "			'categoria' : 'Celular'"
+				+ "		}"
+				+ "}"
+				+ "]";
+		
+		return contatos;
+	}
+	
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}

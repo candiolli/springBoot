@@ -1,0 +1,9 @@
+package com.example;
+
+public class ContatoDto {
+
+	private String nome;
+	private String telefone;
+	private Date data;
+	
+}

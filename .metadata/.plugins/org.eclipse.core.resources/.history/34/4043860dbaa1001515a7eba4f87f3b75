@@ -1,0 +1,12 @@
+package com.example;
+
+import java.io.Serializable;
+
+public class OperadoraDto implements Serializable{
+
+	private String nome;
+	private String codigo;
+	private String categoria;
+	
+	
+}

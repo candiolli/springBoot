@@ -1,0 +1,8 @@
+package com.example;
+
+public class OperadoraDto {
+
+	private String nome;
+	private String codigo;
+	private String categoria;
+}
